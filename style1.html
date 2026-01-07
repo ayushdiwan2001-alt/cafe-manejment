@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Management System</title>
+    <link rel="stylesheet" href="style1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div class="logo">Cafe<span>Admin</span></div>
+        <ul>
+            <li><a href="#" class="active">Dashboard</a></li>
+            <li><a href="#menu-section">Menu Items</a></li>
+            <li><a href="#orders-section">Recent Orders</a></li>
+            <li><a href="#">Inventory</a></li>
+            <li><a href="#">Staff Info</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+
+        <header class="top-bar">
+            <h2>Management Dashboard</h2>
+            <div class="user-info">Admin | <a href="#">Logout</a></div>
+        </header>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Orders</h3>
+                <p>150</p>
+            </div>
+            <div class="stat-card">
+                <h3>Revenue</h3>
+                <p>₹25,000</p>
+            </div>
+            <div class="stat-card">
+                <h3>Active Tables</h3>
+                <p>8/12</p>
+            </div>
+        </section>
+
+        <section id="menu-section" class="data-section">
+            <div class="section-header">
+                <h3>Menu Management</h3>
+                <button class="add-btn">+ Add New Item</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item ID</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#001</td>
+                        <td>Cold Coffee</td>
+                        <td>Beverages</td>
+                        <td>₹120</td>
+                        <td><span class="status available">Available</span></td>
+                        <td><button class="edit-btn">Edit</button></td>
+                    </tr>
+                    <tr>
+                        <td>#002</td>
+                        <td>Paneer Grill Sandwich</td>
+                        <td>Snacks</td>
+                        <td>₹180</td>
+                        <td><span class="status available">Available</span></td>
+                        <td><button class="edit-btn">Edit</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="orders-section" class="data-section">
+            <h3>Recent Orders</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Table No</th>
+                        <th>Items</th>
+                        <th>Total Bill</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#ORD-99</td>
+                        <td>Table 4</td>
+                        <td>2x Latte, 1x Pasta</td>
+                        <td>₹550</td>
+                        <td><span class="status pending">Pending</span></td>
+                    </tr>
+                    <tr>
+                        <td>#ORD-98</td>
+                        <td>Table 2</td>
+                        <td>1x Espresso</td>
+                        <td>₹150</td>
+                        <td><span class="status completed">Completed</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+</body>
+
+</html>

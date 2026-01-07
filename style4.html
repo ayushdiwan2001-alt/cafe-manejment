@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Cafe | Staff Management</title>
+    <style>
+        :root {
+            --primary: #d2691e;
+            /* Cafe Brown */
+            --accent: #8b4513;
+            --online: #2ecc71;
+            --offline: #95a5a6;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .add-staff-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .staff-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            position: relative;
+            border-left: 5px solid var(--primary);
+        }
+
+        .status-dot {
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .on-duty {
+            background-color: var(--online);
+        }
+
+        .off-duty {
+            background-color: var(--offline);
+        }
+
+        .staff-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 0;
+            color: #333;
+        }
+
+        .role {
+            color: var(--accent);
+            font-size: 0.9em;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .info {
+            font-size: 0.85em;
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .actions {
+            margin-top: 15px;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-small {
+            font-size: 0.8em;
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            background: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-small:hover {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Apna Cafe Team</h1>
+            <button class="add-staff-btn">+ Add New Staff</button>
+        </div>
+
+        <div class="staff-grid">
+            <div class="staff-card">
+                <span class="role">Head Barista</span>
+                <p class="staff-name">Arjun Mehta</p>
+                <p class="info"><strong>Shift:</strong> 08:00 AM - 04:00 PM</p>
+                <p class="info"><strong>Status:</strong> <span class="status-dot on-duty"></span> On Duty</p>
+                <div class="actions">
+                    <button class="btn-small">Edit Profile</button>
+                    <button class="btn-small">View Schedule</button>
+                </div>
+            </div>
+
+            <div class="staff-card">
+                <span class="role">Chef</span>
+                <p class="staff-name">Sana Khan</p>
+                <p class="info"><strong>Shift:</strong> 12:00 PM - 08:00 PM</p>
+                <p class="info"><strong>Status:</strong> <span class="status-dot on-duty"></span> On Duty</p>
+                <div class="actions">
+                    <button class="btn-small">Edit Profile</button>
+                    <button class="btn-small">View Schedule</button>
+                </div>
+            </div>
+
+            <div class="staff-card">
+                <span class="role">Server</span>
+                <p class="staff-name">Vikram Singh</p>
+                <p class="info"><strong>Shift:</strong> 04:00 PM - 11:00 PM</p>
+                <p class="info"><strong>Status:</strong> <span class="status-dot off-duty"></span> Off Duty</p>
+                <div class="actions">
+                    <button class="btn-small">Edit Profile</button>
+                    <button class="btn-small">View Schedule</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

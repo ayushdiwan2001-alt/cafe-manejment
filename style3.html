@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Cafe | Order Management</title>
+    <style>
+        :root {
+            --primary: #d2691e;
+            --pending: #ffcc00;
+            --preparing: #3498db;
+            --completed: #2ecc71;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .dashboard {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: var(--primary);
+            margin: 0;
+        }
+
+        .stats {
+            display: flex;
+            gap: 15px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        th {
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .status-badge {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .status-pending {
+            background: #fff9e6;
+            color: #b8860b;
+            border: 1px solid var(--pending);
+        }
+
+        .status-preparing {
+            background: #eef7ff;
+            color: #2980b9;
+            border: 1px solid var(--preparing);
+        }
+
+        .status-completed {
+            background: #eafff2;
+            color: #27ae60;
+            border: 1px solid var(--completed);
+        }
+
+        .btn-action {
+            padding: 6px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background: #eee;
+            transition: 0.2s;
+        }
+
+        .btn-action:hover {
+            background: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dashboard">
+        <header>
+            <h1>Apna Cafe Admin</h1>
+            <div class="stats">
+                <div class="stat-card"><strong>8</strong><br><small>Pending</small></div>
+                <div class="stat-card"><strong>15</strong><br><small>Today</small></div>
+            </div>
+        </header>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Items</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#1042</td>
+                    <td>Rahul Sharma</td>
+                    <td>2x Masala Chai, 1x Samosa</td>
+                    <td>₹130</td>
+                    <td><span class="status-badge status-pending">Pending</span></td>
+                    <td><button class="btn-action">Update</button></td>
+                </tr>
+                <tr>
+                    <td>#1041</td>
+                    <td>Priya V.</td>
+                    <td>1x Filter Coffee, 1x Paneer Sandwich</td>
+                    <td>₹180</td>
+                    <td><span class="status-badge status-preparing">Preparing</span></td>
+                    <td><button class="btn-action">Update</button></td>
+                </tr>
+                <tr>
+                    <td>#1040</td>
+                    <td>Amit Kumar</td>
+                    <td>1x Masala Chai</td>
+                    <td>₹40</td>
+                    <td><span class="status-badge status-completed">Completed</span></td>
+                    <td><button class="btn-action">View</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
